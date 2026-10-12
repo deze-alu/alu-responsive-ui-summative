@@ -1,6 +1,6 @@
 
 ul.breadcrumb {
-  padding: 0.625rem 1rem;
+  padding: 1.25rem;
   list-style: none;
   background-color: var(--bg-color);
 }
@@ -11,7 +11,7 @@ ul.breadcrumb li {
 }
 
 ul.breadcrumb li+li:before {
-  padding: 8px;
+  padding: 0.5rem;
   color: var(--text-muted-color);
   content: "/\00a0";
 }
