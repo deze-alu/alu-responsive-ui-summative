@@ -1,0 +1,21 @@
+<section
+  class="card expense-breakdown"
+  aria-labelledby="expense-title"
+>
+  <header class="expense-breakdown__header">
+    <div>
+      <h2 id="expense-title">Expenses by category</h2>
+      <p>Where your money goes</p>
+    </div>
+  </header>
+
+  <div class="expense-breakdown__chart">
+    <canvas
+      role="img"
+      aria-label="Doughnut chart showing expenses by category"
+      data-expense-chart
+    ></canvas>
+  </div>
+
+  <ul class="expense-legend" data-expense-legend></ul>
+</section>

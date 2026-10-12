@@ -8,6 +8,7 @@
 @import url('./modules/navigation.css');
 @import url('./modules/button.css');
 @import url('./modules/card.css');
+@import url('./modules/expense-chart.css');
 
 body {
 	background-color: var(--bg-color);

@@ -18,10 +18,14 @@ p, .paragraph {
 	padding-top: 0.625rem;
 }
 
+.link {
+	color: var(--color-accent);
+	text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .flex-layout {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }

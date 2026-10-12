@@ -5,7 +5,6 @@ class SiteNavigation extends HTMLElement {
 
     try {
       const response = await fetch(url);
-
       if (!response.ok) {
         throw new Error(
           `Failed to load navigation: ${response.status} ${response.url}`

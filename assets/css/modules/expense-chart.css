@@ -1,0 +1,70 @@
+.expense-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expense-legend__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  font-size: 0.875rem;
+}
+
+.expense-legend__item:not(:last-child) {
+	border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.expense-legend__name {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+  color: var(--text-color);
+}
+
+.expense-legend__percentage {
+  color: var(--text-secondary);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.expense-legend__amount {
+  min-width: 5.5rem;
+  color: var(--text-color);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.expense-legend__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+  .expense-legend {
+    gap: 0.875rem;
+  }
+
+  .expense-legend__item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 0.625rem;
+  }
+
+  .expense-legend__percentage {
+    display: none;
+  }
+
+  .expense-legend__amount {
+    min-width: auto;
+  }
+}
