@@ -1,25 +1,36 @@
 
 class SiteNavigation extends HTMLElement {
-	constructor() {
-		super();
+  async connectedCallback() {
+    const url = new URL("./navigation.html", import.meta.url);
 
-	}
+    try {
+      const response = await fetch(url);
 
-	async connectedCallback() {
-		const url = new URL("./_navigation.html", import.meta.url);
-		const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(
+          `Failed to load navigation: ${response.status} ${response.url}`
+        );
+      }
 
-		const html = await response.text();
-		this.innerHTML = html;
+      this.innerHTML = await response.text();
+      this.setupEvents();
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-		this.setupEvents();
-	}
+  setupEvents() {
+    const nav = this.querySelector("[data-navigation]");
 
-	setupEvents() {
-		const nav = this.querySelector('[data-navigation]');
+    if (!nav) {
+      console.error("Navigation element not found in component HTML.");
+      return;
+    }
 
-		nav.addEventListener('click', () => console.log("Clicked the nav"))
-	}
+    nav.addEventListener("click", () => {
+      console.log("Clicked the nav");
+    });
+  }
 }
 
-customElements.define('site-navigation', SiteNavigation);
+customElements.define("site-navigation", SiteNavigation);

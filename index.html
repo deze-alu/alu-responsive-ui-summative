@@ -22,23 +22,59 @@
 		</header>
 
 		<!-- Main Content -->
-		<section class="page-content">
-			<div class="flex-layout">
+		<main class="page-content">
+			<section class="flex-layout" aria-labelledby="page-title">
 				<div>
 					<h1>Your money, at a glance.</h1>
 					<p class="pt-10">Welcome back, John. Here’s where you stand this month.</p>
 				</div>
-				<button class="button">
+				<button class="button" type="button">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M4.16602 10H15.834M10 4.16602V15.834" stroke="#1A1A1A" stroke-linecap="round"/>
 					</svg>
 
 					Add Expense
 				</button>
-			</div>
-		</section>
+			</section>
 
-		<site-navigation />
+			<section class="flex-layout">
+				<div class="card card--white">
+					<div class="flex-layout">
+						<h2 class="card__title">Total Expense</h2>
+
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.875 11.3333V14.1667C14.875 14.3545 14.8004 14.5347 14.6675 14.6675C14.5347 14.8004 14.3545 14.875 14.1667 14.875H3.54167C3.16594 14.875 2.80561 14.7257 2.53993 14.4601C2.27426 14.1944 2.125 13.8341 2.125 13.4583V3.54167C2.125 3.16594 2.27426 2.80561 2.53993 2.53993C2.80561 2.27426 3.16594 2.125 3.54167 2.125H12.75C12.9379 2.125 13.118 2.19963 13.2509 2.33247C13.3837 2.4653 13.4583 2.64547 13.4583 2.83333V4.95833M2.125 3.54167C2.125 3.91739 2.27426 4.27772 2.53993 4.5434C2.80561 4.80908 3.16594 4.95833 3.54167 4.95833H14.1667C14.3545 4.95833 14.5347 5.03296 14.6675 5.1658C14.8004 5.29864 14.875 5.4788 14.875 5.66667V8.5M14.875 8.5H12.75C12.3743 8.5 12.0139 8.64926 11.7483 8.91493C11.4826 9.18061 11.3333 9.54094 11.3333 9.91667C11.3333 10.2924 11.4826 10.6527 11.7483 10.9184C12.0139 11.1841 12.3743 11.3333 12.75 11.3333H14.875M14.875 8.5C15.0629 8.5 15.243 8.57463 15.3759 8.70747C15.5087 8.8403 15.5833 9.02047 15.5833 9.20833V10.625C15.5833 10.8129 15.5087 10.993 15.3759 11.1259C15.243 11.2587 15.0629 11.3333 14.875 11.3333" stroke="currentColor" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<p class="card__price">$12,843.20</p>
+					<p>Updated today</p>
+				</div>
+				<div class="card">
+					<div class="flex-layout">
+						<h2 class="card__title">Income this month</h2>
+
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12.0412 4.95886L4.95898 12.0411M4.95898 4.95886V12.0411H12.0412" stroke="currentColor" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<p class="card__price">$6,200.00</p>
+					<p>Salary $5,600.00 · Freelance $600.00</p>
+				</div>
+				<div class="card">
+					<div class="flex-layout">
+						<h2 class="card__title">Expenses this month</h2>
+
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12.0412 12.0411V4.95886H4.95898M12.0412 4.95886L4.95898 12.0411" stroke="currentColor" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<p class="card__price">$2,436.80</p>
+					<p>14 expenses · $563.20 left in your budget</p>
+				</div>
+			</section>
+		</main>
+
+		<site-navigation></site-navigation>
 	</body>
 	<script type="module" src="./modules/modules.js"></script>
 </html>
