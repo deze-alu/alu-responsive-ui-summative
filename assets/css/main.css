@@ -9,6 +9,7 @@
 @import url('./modules/button.css');
 @import url('./modules/card.css');
 @import url('./modules/expense-chart.css');
+@import url('./modules/recent-activity.css');
 
 body {
 	background-color: var(--bg-color);

@@ -41,7 +41,7 @@ class ExpenseChart extends HTMLElement {
 
 		const totalAmountSpent = amounts.reduce((acc, amount) => acc + amount, 0)
 		this.renderLegends(categories, totals, totalAmountSpent);
-		this.renderPie(categories, amounts, totalAmountSpent);
+		this.renderPie(categories, amounts);
 	}
 
 	renderLegends(categories, totals, totalAmountSpent) {
@@ -77,7 +77,7 @@ class ExpenseChart extends HTMLElement {
 		});
 	}
 
-	renderPie(categories, amounts, totalAmountSpent) {
+	renderPie(categories, amounts) {
 		const canvas = this.querySelector('[data-expense-chart]');
 
 		if (!canvas || typeof Chart === 'undefined') return;
@@ -100,7 +100,6 @@ class ExpenseChart extends HTMLElement {
 			options: {
 				responsive: true,
 				maintainAspectRatio: false,
-				// cutout: "72%",
 				plugins: {
           legend: { display: false },
           tooltip: {
