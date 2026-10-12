@@ -1,1 +1,18 @@
+@import url('./reset.css');
 @import url('./tokens.css');
+
+/* Components Import */
+@import url('./modules/breadcrumb.css');
+@import url('./modules/navigation.css');
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: var(--font-family-sans);
+	position: relative;
+	min-height: 100vh;
+}
+
+.page-header {
+	border-bottom: 1px solid var(--border-color);
+}

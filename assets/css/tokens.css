@@ -1,5 +1,6 @@
-:root[data-theme="dark"] {
-	--font-family:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+:root {
+	--font-family-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+	--font-family-serif: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
 	/*Colors*/
 	--bg-color: #0B0B0B;
@@ -7,7 +8,11 @@
 	--muted-text-color: #3F3F3F;
 	--button-bg:#EDEDED;
 	--button-text-color: #1A1A1A;
+	--border-color: #292929;
+	--surface-color: #131313;
 
  	--color-icon: #FFFFFF;
   --color-accent: #FF3C00;
+
+  --radius: 8px;
 }

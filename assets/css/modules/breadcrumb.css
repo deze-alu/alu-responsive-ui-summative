@@ -1,0 +1,31 @@
+
+ul.breadcrumb {
+  padding: 0.625rem 1rem;
+  list-style: none;
+  background-color: var(--bg-color);
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 0.875rem;
+}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: var(--text-muted-color);
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: var(--text-muted-color);
+  text-decoration: none;
+  opacity: .5;
+}
+
+ul.breadcrumb li:last-child a {
+	opacity: 1;
+}
+
+ul.breadcrumb li a:hover {
+  color: var(--border-color);
+}
