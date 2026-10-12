@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rec_0001",
+    "description": "Lunch at cafeteria",
+    "amount": 12.5,
+    "category": "Food",
+    "reference": "",
+    "date": "2026-10-11",
+    "createdAt": "2026-10-11T12:15:00.000Z",
+    "updatedAt": "2026-10-11T12:15:00.000Z"
+  },
+  {
+    "id": "rec_0002",
+    "description": "Chemistry textbook",
+    "amount": 89.99,
+    "category": "Books",
+    "reference": "RCPT-2026-0042",
+    "date": "2026-10-10",
+    "createdAt": "2026-10-10T09:02:11.000Z",
+    "updatedAt": "2026-10-10T09:02:11.000Z"
+  },
+  {
+    "id": "rec_0003",
+    "description": "Bus pass",
+    "amount": 45,
+    "category": "Transport",
+    "reference": "TXN12345A",
+    "date": "2026-10-09",
+    "createdAt": "2026-10-09T07:45:30.000Z",
+    "updatedAt": "2026-10-09T07:45:30.000Z"
+  },
+  {
+    "id": "rec_0004",
+    "description": "Coffee with friends",
+    "amount": 8.75,
+    "category": "Entertainment",
+    "reference": "",
+    "date": "2026-10-08",
+    "createdAt": "2026-10-08T16:30:00.000Z",
+    "updatedAt": "2026-10-08T17:12:00.000Z"
+  },
+  {
+    "id": "rec_0005",
+    "description": "Tuition fees Q4",
+    "amount": 1500,
+    "category": "Fees",
+    "reference": "FEE-2026-Q4-77",
+    "date": "2026-10-06",
+    "createdAt": "2026-10-06T10:00:00.000Z",
+    "updatedAt": "2026-10-06T10:00:00.000Z"
+  },
+  {
+    "id": "rec_0006",
+    "description": "Café au lait",
+    "amount": 3.2,
+    "category": "Food",
+    "reference": "",
+    "date": "2026-10-05",
+    "createdAt": "2026-10-05T08:05:00.000Z",
+    "updatedAt": "2026-10-05T08:05:00.000Z"
+  },
+  {
+    "id": "rec_0007",
+    "description": "Mom's birthday gift",
+    "amount": 60,
+    "category": "Other",
+    "reference": "",
+    "date": "2026-10-02",
+    "createdAt": "2026-10-02T18:40:00.000Z",
+    "updatedAt": "2026-10-02T18:40:00.000Z"
+  },
+  {
+    "id": "rec_0008",
+    "description": "Printing: lab report (3 copies)",
+    "amount": 0.9,
+    "category": "Books",
+    "reference": "",
+    "date": "2026-09-30",
+    "createdAt": "2026-09-30T14:20:00.000Z",
+    "updatedAt": "2026-09-30T14:20:00.000Z"
+  },
+  {
+    "id": "rec_0009",
+    "description": "Streaming subscription - student plan",
+    "amount": 5.99,
+    "category": "Entertainment",
+    "reference": "SUB-0099-X",
+    "date": "2025-12-31",
+    "createdAt": "2025-12-31T23:59:59.000Z",
+    "updatedAt": "2025-12-31T23:59:59.000Z"
+  },
+  {
+    "id": "rec_0010",
+    "description": "Leap-day taxi to campus",
+    "amount": 14.25,
+    "category": "Transport",
+    "reference": "",
+    "date": "2024-02-29",
+    "createdAt": "2024-02-29T10:00:00.000Z",
+    "updatedAt": "2024-02-29T10:00:00.000Z"
+  },
+  {
+    "id": "rec_0011",
+    "description": "Vending machine snack",
+    "amount": 0.01,
+    "category": "Food",
+    "reference": "",
+    "date": "2000-01-01",
+    "createdAt": "2000-01-01T00:00:00.000Z",
+    "updatedAt": "2000-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "rec_0012",
+    "description": "Bird by Bird paperback",
+    "amount": 11.11,
+    "category": "Books",
+    "reference": "ISBN-0385480016",
+    "date": "2026-10-07",
+    "createdAt": "2026-10-07T06:00:00.000Z",
+    "updatedAt": "2026-10-07T06:00:00.000Z"
+  }
+]
