@@ -1,0 +1,13 @@
+:root[data-theme="dark"] {
+	--font-family:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+	/*Colors*/
+	--bg-color: #0B0B0B;
+	--text-color: #EEEEEE;
+	--muted-text-color: #3F3F3F;
+	--button-bg:#EDEDED;
+	--button-text-color: #1A1A1A;
+
+ 	--color-icon: #FFFFFF;
+  --color-accent: #FF3C00;
+}
