@@ -1,8 +1,9 @@
 
 ul.breadcrumb {
-  padding: 1.25rem;
   list-style: none;
   background-color: var(--bg-color);
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 ul.breadcrumb li {

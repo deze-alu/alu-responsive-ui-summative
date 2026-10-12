@@ -1,0 +1,27 @@
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1, .heading-1 {
+	font-size: 36px;
+	font-weight: 600;
+}
+
+p, .paragraph {
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+}
+
+.pt-10 {
+	padding-top: 0.625rem;
+}
+
+@media (min-width: 768px) {
+  .flex-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

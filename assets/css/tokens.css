@@ -5,9 +5,11 @@
 	/*Colors*/
 	--bg-color: #0B0B0B;
 	--text-color: #EEEEEE;
+	--text-secondary: #A0A0A0;
 	--muted-text-color: #3F3F3F;
 	--button-bg:#EDEDED;
 	--button-text-color: #1A1A1A;
+	--button-hover: #DCDCDC;
 	--border-color: #292929;
 	--surface-color: #131313;
 
