@@ -1,6 +1,12 @@
-import {BooksSvg, TransportSvg, GrociesSvg, OthersSvg, FoodSvg, EnterainmentSvg, MoneySvg} from "../../lib/svg.js";
+import { BooksSvg, TransportSvg, GrociesSvg, OthersSvg, FoodSvg, EnterainmentSvg, MoneySvg } from "../../lib/svg.js";
+import {Expense} from "../../lib/expense.js";
 
 class RecentActivity extends HTMLElement {
+	constructor() {
+		super();
+		this.expense = new Expense();
+	}
+
 	async connectedCallback() {
 		const url = new URL('./recent-activity.html', import.meta.url);
 
@@ -30,7 +36,7 @@ class RecentActivity extends HTMLElement {
 
 
 	renderRecentActivities() {
-	  const expenses = this.getExpenses().slice(-8).reverse();
+	  const expenses = this.expense.getExpenses().slice(-8).reverse();
 	  const raList = this.querySelector('[data-recent-activity-list]');
 
 	  if (!raList) return;

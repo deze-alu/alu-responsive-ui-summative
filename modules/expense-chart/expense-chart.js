@@ -1,4 +1,11 @@
+import {Expense} from "../../lib/expense.js";
+
 class ExpenseChart extends HTMLElement {
+	constructor() {
+		super();
+		this.expense = new Expense();
+	}
+
 	async connectedCallback() {
 		this.chart = null;
 		const url = new URL('./expense-chart.html', import.meta.url);
@@ -17,29 +24,13 @@ class ExpenseChart extends HTMLElement {
     }
 	}
 
-	getExpenses() {
-		try {
-			return JSON.parse(localStorage.getItem('expenses') || []);
-		} catch (e) {
-			console.error("Failed to load from LocalStorage: ", e);
-			return [];
-		}
-	}
-
 	renderChart() {
-		const expenses = this.getExpenses();
-		const totals = expenses.reduce((acc, expense) => {
-			const category = expense.category;
-			const amount = Number(expense.amount);
-
-			acc[category] = (acc[category] ?? 0) + amount;
-			return acc;
-		}, {});
+		const totals = this.expense.getTotalsByCategory();
 
 		const categories = Object.keys(totals);
 		const amounts = Object.values(totals);
 
-		const totalAmountSpent = amounts.reduce((acc, amount) => acc + amount, 0)
+		const totalAmountSpent = this.expense.getTotalAmountSpent();
 		this.renderLegends(categories, totals, totalAmountSpent);
 		this.renderPie(categories, amounts);
 	}
