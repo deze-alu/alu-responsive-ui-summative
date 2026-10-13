@@ -47,3 +47,11 @@ recent-activity li:not(:last-child) {
 	font-size: 13px;
 	color: var(--text-color);
 }
+
+@media (max-width: 768px) {
+	recent-activity .flex-layout {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

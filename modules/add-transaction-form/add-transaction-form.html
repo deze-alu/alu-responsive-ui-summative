@@ -1,0 +1,58 @@
+<form class="card add-transaction-form" data-add-transaction>
+	<div class="amount-field" data-amount-field>
+		<label class="amount-field__label" for="amount">
+			Amount <span aria-hidden="true">*</span>
+		</label>
+
+		<div class="amount-field__row">
+			<span class="amount-field__symbol" aria-hidden="true">$</span>
+
+			<input
+				id="amount"
+				name="amount"
+				class="amount-field__input"
+				type="text"
+				inputmode="decimal"
+				autocomplete="off"
+				placeholder="0.00"
+				required
+				data-amount-input
+			/>
+		</div>
+		<span data-amount-error></span>
+	</div>
+
+	<div class="flex-layout">
+		<div class="field-group">
+			<label for="category">Category</label>
+			<div class="select-wrap">
+				<select class="form-field" id="category" name="category" required data-select-input>
+					<option value="" disabled selected hidden>Choose a category</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="field-group">
+			<div class="flex-layout">
+				<label for="date">Date</label>
+				<span data-date-error></span>
+			</div>
+			<input class="form-field" type="date" id="date" name="date" required data-date-input />
+		</div>
+	</div>
+
+	<div class="field-group">
+		<label for="description">Date</label>
+		<textarea
+			class="form-field"
+			placeholder="Description"
+			id="description"
+			data-description-input
+			required
+		></textarea>
+	</div>
+
+	<div class="field-group">
+		<button class="button" type="submit" data-form-button>Add Transaction</button>
+	</div>
+</form>

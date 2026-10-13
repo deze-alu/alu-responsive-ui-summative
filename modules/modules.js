@@ -1,3 +1,4 @@
 import './navigation/navigation.js'
 import './expense-chart/expense-chart.js'
 import './recent-activity/recent-activity.js'
+import './add-transaction-form/add-transaction-form.js'

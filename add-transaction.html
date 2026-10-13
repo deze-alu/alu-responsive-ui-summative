@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Finance Tracket - Transaction Page</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/main.css" />
+	</head>
+	<body>
+		<!-- PAGE HEADER -->
+		<header class="page-header">
+			<ul class="breadcrumb">
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Add Transaction</a></li>
+			</ul>
+		</header>
+
+		<main class="page-content">
+			<section class="flex-layout" aria-labelledby="page-title">
+				<div>
+					<h1>Keep track of the little things.</h1>
+					<p class="pt-10">Add an expense and give every dollar a place.</p>
+				</div>
+			</section>
+
+			<section class="flex-layout">
+				<add-transaction-form></add-transaction-form>
+			</section>
+		</main>
+
+		<site-navigation active="add-transaction"></site-navigation>
+	</body>
+	<script type="module" src="./modules/modules.js"></script>
+</html>

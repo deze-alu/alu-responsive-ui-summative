@@ -39,7 +39,8 @@
 	border-top-right-radius: var(--radius);
 }
 
-.navigation__inner a:hover {
+.navigation__inner a:hover,
+.navigation__inner a.active {
 	color: var(--color-accent);
 	background-color: #1B1B1B;
 }

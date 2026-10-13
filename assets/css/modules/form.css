@@ -1,0 +1,166 @@
+.form-field {
+	flex: 1 1 auto;
+	min-width: 0;
+	width: 100%;
+	padding: 1rem;
+	background: var(--bg-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius);
+	outline: 0;
+	font-weight: 400;
+	font-size: 1.5rem;
+	letter-spacing: -0.01em;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-color);
+	caret-color: var(--color-accent);
+	font-family: var(--font-family-sans);
+}
+
+.form-field::placeholder {
+	color: var(--muted-text-color);
+}
+
+.field-group {
+	display: grid;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.field-group label {
+	color: var(--text-secondary);
+}
+
+select.form-field,
+input[type='date'].form-field {
+	appearance: none;
+	line-height: 1.2;
+	cursor: pointer;
+}
+
+select.form-field:invalid,
+input[type='date'].form-field:invalid {
+	color: var(--muted-text-color);
+}
+
+.select-wrap {
+	position: relative;
+}
+
+.select-wrap select {
+	padding-right: 3rem;
+}
+
+.select-wrap::after {
+	content: '';
+	position: absolute;
+	right: 1.25rem;
+	top: 50%;
+	width: 1rem;
+	height: 1rem;
+	translate: 0 -50%;
+	background: var(--color-icon);
+	/* https://w3schools.dev/howto/howto_custom_select.asp */
+	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
+		center / contain no-repeat;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
+		center / contain no-repeat;
+	pointer-events: none;
+}
+
+select.form-field option {
+	background: var(--surface-color);
+	color: var(--text-color);
+}
+
+input[type='date'].form-field {
+	color-scheme: dark;
+	display: block;
+	min-height: 4rem;
+}
+
+input[type='date'].form-field::-webkit-date-and-time-value {
+	text-align: left;
+}
+
+input[type='date'].form-field::-webkit-calendar-picker-indicator {
+	opacity: 0.6;
+	cursor: pointer;
+	transition: opacity 0.15s ease;
+}
+
+input[type='date'].form-field:hover::-webkit-calendar-picker-indicator {
+	opacity: 1;
+}
+
+/*  CUSTOM FORM */
+.amount-field {
+	/* The idea below(clamp) gotten from ChatGPT */
+	--amount-size: clamp(1.75rem, 4vw, 2.5rem);
+
+	display: grid;
+	gap: 0.75rem;
+	padding: 1.5rem 1.75rem;
+	background: var(--bg-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius);
+	cursor: text;
+	transition: border-color 0.15s ease;
+}
+
+.amount-field:focus-within,
+.form-field:focus-within,
+.error-field {
+	border-color: var(--color-accent);
+}
+
+span[data-amount-error],
+span[data-date-error] {
+	color: var(--color-accent);
+}
+
+.amount-field__label {
+	font-size: 0.9375rem;
+	color: var(--text-secondary);
+	cursor: text;
+}
+
+.amount-field__row {
+	display: flex;
+	align-items: baseline;
+	gap: 0.75rem;
+	min-width: 0;
+}
+
+.amount-field__symbol {
+	font-size: var(--amount-size);
+	font-weight: 300;
+	line-height: 1;
+	color: var(--text-secondary);
+}
+
+.amount-field__input {
+	flex: 1 1 auto;
+	min-width: 0;
+	width: 100%;
+	padding: 0;
+	background: none;
+	border: 0;
+	outline: 0;
+	font: 400 var(--amount-size) / 1 var(--font-family-sans);
+	letter-spacing: -0.01em;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-color);
+	caret-color: var(--color-accent);
+}
+
+.amount-field__input::placeholder {
+	color: var(--muted-text-color);
+}
+
+add-transaction-form {
+	width: 100%;
+}
+
+add-transaction-form .card__title {
+	font-size: 1.75rem;
+}

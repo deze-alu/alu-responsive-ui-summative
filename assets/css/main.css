@@ -10,6 +10,7 @@
 @import url('./modules/card.css');
 @import url('./modules/expense-chart.css');
 @import url('./modules/recent-activity.css');
+@import url('./modules/form.css');
 
 body {
 	background-color: var(--bg-color);
@@ -38,8 +39,5 @@ body {
 }
 
 @media (min-width: 768px) {
-	.page-content {
-		padding-left: 0;
-		padding-right: 0;
-	}
+
 }
