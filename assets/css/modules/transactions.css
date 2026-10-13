@@ -2,4 +2,125 @@
 	border-radius: var(--radius);
 	border: 1px solid var(--border-radius);
 	padding: 0;
+	background-color: var(--surface-color);
+}
+
+transactions-table {
+	width: 100%;
+}
+
+.table-wrap {
+	overflow-x: auto;
+}
+
+.table {
+	width: 100%;
+	min-width: 40rem;
+	border-collapse: collapse;
+	font-size: 1rem;
+}
+
+.table th,
+.table td {
+	padding: 1rem 1.5rem;
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.table thead th {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--text-secondary);
+	background-color: var(--bg-color);
+}
+
+.table tbody tr {
+	border-top: 1px solid var(--border-color);
+}
+
+.table tbody tr:hover,
+.table tbody tr:nth-child(even):hover {
+	background: var(--bg-color);
+}
+
+.table tbody tr:nth-child(even) {
+	background: var(--table-surface);
+}
+
+.table__sort {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 0;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	color: inherit;
+	font: inherit;
+}
+
+.table__sort:hover {
+	color: var(--text-color);
+	background: none;
+}
+
+.table__sort:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 4px;
+	border: var(--radius);
+}
+
+.table__sort-icon {
+	width: 1rem;
+	height: 1rem;
+	color: var(--color-accent);
+	opacity: 0;
+}
+
+.table__sort:hover .table__sort-icon {
+	opacity: 0.5;
+}
+
+.transaction {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.transaction__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	color: var(--color-icon);
+	background: var(--bg-color);
+	border: 1px solid var(--border-color);
+}
+
+.transaction__icon svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.transaction__name {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+.category-tag {
+	display: inline-block;
+	padding: 4px 12px;
+	font-size: 14px;
+	color: var(--text-color);
+	background-color: var(--border-color);
+	border-radius: var(--radius);
+}
+
+.amount {
+	font-weight: 500;
+	color: var(--text-color);
 }
