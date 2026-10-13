@@ -2,7 +2,6 @@
 @import url('./tokens.css');
 @import url('./utils.css');
 
-
 /* Components Import */
 @import url('./modules/breadcrumb.css');
 @import url('./modules/navigation.css');
@@ -11,6 +10,7 @@
 @import url('./modules/expense-chart.css');
 @import url('./modules/recent-activity.css');
 @import url('./modules/form.css');
+@import url('./modules/transactions.css');
 
 body {
 	background-color: var(--bg-color);
@@ -39,5 +39,4 @@ body {
 }
 
 @media (min-width: 768px) {
-
 }

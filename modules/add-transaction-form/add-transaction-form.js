@@ -1,4 +1,5 @@
 import { Expense } from '../../lib/expense.js'
+import { injectHTMLTemplate } from '../../lib/html.js'
 
 class AddTransactionForm extends HTMLElement {
 	constructor() {
@@ -8,21 +9,10 @@ class AddTransactionForm extends HTMLElement {
 	}
 
 	async connectedCallback() {
-		const url = new URL('./add-transaction-form.html', import.meta.url)
+		await injectHTMLTemplate('add-transaction-form.html', this)
 
-		try {
-			const response = await fetch(url)
-
-			if (!response.ok) {
-				throw new Error(`Failed to load navigation: ${response.status} ${response.url}`)
-			}
-
-			this.innerHTML = await response.text()
-			this.renderSelectOptions()
-			this.setupEvents()
-		} catch (error) {
-			console.log("Couldn't fetch the page: ", error)
-		}
+		this.renderSelectOptions()
+		this.setupEvents()
 	}
 
 	renderSelectOptions() {
