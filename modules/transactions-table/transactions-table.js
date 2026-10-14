@@ -18,21 +18,41 @@ class TransactionsTable extends HTMLElement {
 		this.sortKey = 'date'
 		this.sortType = 'date'
 		this.moneyFormat = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
+		this.query = ''
 	}
 
 	async connectedCallback() {
 		await injectHTMLTemplate('transactions-table.html', this)
+		this.setupEvents()
 		this.renderTable()
+	}
+
+	setupEvents() {
+		const searchField = this.querySelector('[data-search-input]')
+
+		searchField.addEventListener('input', () => {
+			this.query = searchField.value.trim().toLowerCase()
+			this.renderTable()
+		})
 	}
 
 	renderTable() {
 		const body = this.querySelector('[data-table-body]')
 		console.log(this.expenses)
 		const rows = this.expenses
+			.filter((expense) => this.search(expense))
 			.sort((a, z) => this.sortTable(a, z))
 			.map((expense) => this.createTableRow(expense))
 
 		body.replaceChildren(...rows)
+	}
+
+	search(expense) {
+		if (!this.query) return true
+
+		const text =
+			`${expense.id} ${expense.description} ${expense.category} ${expense.amount}`.toLowerCase()
+		return text.includes(this.query)
 	}
 
 	sortTable(a, z) {
