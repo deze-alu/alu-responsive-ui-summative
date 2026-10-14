@@ -14,6 +14,9 @@ class TransactionsTable extends HTMLElement {
 		super()
 
 		this.expenses = new Expense().getExpenses()
+		this.sortDirection = 'descending'
+		this.sortKey = 'date'
+		this.sortType = 'date'
 		this.moneyFormat = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 	}
 
@@ -25,9 +28,28 @@ class TransactionsTable extends HTMLElement {
 	renderTable() {
 		const body = this.querySelector('[data-table-body]')
 		console.log(this.expenses)
-		const rows = this.expenses.map((expense) => this.createTableRow(expense))
+		const rows = this.expenses
+			.sort((a, z) => this.sortTable(a, z))
+			.map((expense) => this.createTableRow(expense))
 
 		body.replaceChildren(...rows)
+	}
+
+	sortTable(a, z) {
+		const valueA = a[this.sortKey]
+		const valueZ = z[this.sortKey]
+
+		let result
+
+		if (this.sortType === 'number') {
+			result = Number(valueA) - Number(valueZ)
+		} else if (this.sortType === 'date') {
+			result = valueA.localeCompare(valueZ)
+		} else {
+			result = valueA.localeCompare(valueZ, undefined, { sensitivity: 'base', numeric: true })
+		}
+
+		return this.sortDirection === 'ascending' ? result : -result
 	}
 
 	createElement(htmlTag, className, text) {
