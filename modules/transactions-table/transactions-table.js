@@ -29,10 +29,15 @@ class TransactionsTable extends HTMLElement {
 
 	setupEvents() {
 		const searchField = this.querySelector('[data-search-input]')
+		const sortFields = this.querySelectorAll('[data-sort]')
 
 		searchField.addEventListener('input', () => {
 			this.query = searchField.value.trim().toLowerCase()
 			this.renderTable()
+		})
+
+		sortFields.forEach((button) => {
+			button.addEventListener('click', () => this.handleSort(button))
 		})
 	}
 
@@ -45,6 +50,21 @@ class TransactionsTable extends HTMLElement {
 			.map((expense) => this.createTableRow(expense))
 
 		body.replaceChildren(...rows)
+	}
+
+	handleSort(button) {
+		console.log('Got here')
+		const key = button.dataset.sort
+
+		if (key === this.sortKey) {
+			this.sortDirection = this.sortDirection === 'ascending' ? 'descending' : 'ascending'
+		} else {
+			this.sortKey = key
+			this.sortType = button.dataset.type
+			this.sortDirection = 'ascending'
+		}
+
+		this.renderTable()
 	}
 
 	search(expense) {
