@@ -155,6 +155,7 @@ class AddTransactionForm extends HTMLElement {
 
 		console.log(newExpenses, 'EX')
 
+		alert('Transaction added successfully!')
 		this.expense.saveExpenses(newExpenses)
 		this.querySelector('[data-add-transaction]').reset()
 	}

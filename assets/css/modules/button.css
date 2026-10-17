@@ -21,3 +21,9 @@ button:hover,
 	background-color: var(--button-hover);
 	cursor: pointer;
 }
+
+.button--secondary {
+	background-color: var(--table-surface) !important;
+	border: 1px solid var(--border-color) !important;
+	color: var(--text-color) !important;
+}

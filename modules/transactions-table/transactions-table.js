@@ -13,7 +13,8 @@ class TransactionsTable extends HTMLElement {
 	constructor() {
 		super()
 
-		this.expenses = new Expense().getExpenses()
+		this.expenseObj = new Expense()
+		this.expenses = this.expenseObj.getExpenses()
 		this.sortDirection = 'descending'
 		this.sortKey = 'date'
 		this.sortType = 'date'
@@ -30,6 +31,9 @@ class TransactionsTable extends HTMLElement {
 	setupEvents() {
 		const searchField = this.querySelector('[data-search-input]')
 		const sortFields = this.querySelectorAll('[data-sort]')
+		const importButton = this.querySelector('[data-import-input]')
+		const exportButton = this.querySelector('[data-export-input]')
+		const fileInput = this.querySelector('[data-file-input]')
 
 		searchField.addEventListener('input', () => {
 			this.query = searchField.value.trim().toLowerCase()
@@ -38,6 +42,28 @@ class TransactionsTable extends HTMLElement {
 
 		sortFields.forEach((button) => {
 			button.addEventListener('click', () => this.handleSort(button))
+		})
+
+		exportButton.addEventListener('click', () => this.expenseObj.exportExpenses())
+		importButton.addEventListener('click', () => fileInput.click())
+
+		fileInput.addEventListener('change', async () => {
+			const file = fileInput.files[0]
+
+			console.log('Json file', file)
+
+			if (!file) return
+
+			try {
+				await this.expenseObj.importExpenses(file)
+
+				this.expenses = this.expenseObj.getExpenses()
+				this.renderTable()
+			} catch (error) {
+				console.error('Failed to import expenses: ', error)
+			} finally {
+				fileInput.value = ''
+			}
 		})
 	}
 
