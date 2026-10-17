@@ -3,6 +3,7 @@
 Finance Tracker is a small web app for students. You add your expenses, and the app shows you where your money goes. It runs fully in the browser. There is no backend and no build step. All data is saved in your browser's Local Storage.
 
 **Live Application:** <a href="https://deze-alu.github.io/alu-responsive-ui-summative/" target="_blank" rel="noopener noreferrer">View the Finance Tracker</a>
+<br>
 **YouTube Walkthrough:** <a href="https://youtu.be/XJvEt1RHhGo" target="_blank" rel="noopener noreferrer">Watch the project walkthrough</a>
 
 **Figma Design:** <a href="https://www.figma.com/design/BNlV7CWl5eHY331nZckgYB/Untitled?node-id=2-8256&t=ccFpNJak9SHnYxNR-1" target="_blank" rel="noopener noreferrer">Open the design file</a>
