@@ -1,0 +1,128 @@
+{
+  "reportVersion": "1.0",
+  "assignmentId": "assignment-1791912646770-7mnp04i",
+  "assignmentName": "Summative. - Responsive UI",
+  "generatedAt": 1792231031014,
+  "metrics": {
+    "assignmentId": "assignment-1791912646770-7mnp04i",
+    "authorship": {
+      "totalLines": 18050,
+      "manualLines": 18000,
+      "permittedAILines": 50,
+      "prohibitedAILines": 0,
+      "flaggedAILines": 0,
+      "authorshipPercentage": 0.28,
+      "prohibitedPercentage": 0.0
+    },
+    "ownership": {
+      "score": 95,
+      "filesReviewed": 13,
+      "filesUnreviewed": 0,
+      "unreviewedLines": 0,
+      "averageReviewTimeMs": 996967.8
+    },
+    "violations": [],
+    "rawEvents": [],
+    "fileReviews": [],
+    "trackingGaps": []
+  },
+  "policy": {
+    "maxAuthorshipPercentage": 20,
+    "minOwnershipScore": 40,
+    "exemptFileGlobs": [
+      "**/README*",
+      "**/*.md",
+      "**/package.json",
+      "**/package-lock.json",
+      "**/npm-shrinkwrap.json",
+      "**/yarn.lock",
+      "**/pnpm-lock.yaml",
+      "**/poetry.lock",
+      "**/Pipfile.lock",
+      "**/Gemfile.lock",
+      "**/Cargo.lock",
+      "**/composer.lock",
+      "**/go.sum",
+      "**/.gitignore",
+      "**/LICENSE*",
+      "**/tsconfig.json",
+      "**/.eslintrc*",
+      "**/.prettierrc*",
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/.npm/**",
+      "**/venv/**",
+      "**/.venv/**",
+      "**/env/**",
+      "**/__pycache__/**",
+      "**/.tox/**",
+      "**/.mypy_cache/**",
+      "**/.pytest_cache/**",
+      "**/.ruff_cache/**",
+      "**/site-packages/**",
+      "**/.git/**",
+      "**/.hg/**",
+      "**/.svn/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/out/**",
+      "**/coverage/**",
+      "**/.nyc_output/**",
+      "**/.next/**",
+      "**/.nuxt/**",
+      "**/target/**",
+      "**/vendor/**",
+      "**/.idea/**",
+      "**/.vs/**",
+      "**/*.pyc",
+      "**/*.pyo",
+      "**/*.min.js",
+      "**/*.bundle.js",
+      "**/*.map",
+      "**/package-lock.json",
+      "**/npm-shrinkwrap.json",
+      "**/yarn.lock",
+      "**/pnpm-lock.yaml",
+      "**/poetry.lock",
+      "**/Pipfile.lock",
+      "**/Gemfile.lock",
+      "**/Cargo.lock",
+      "**/composer.lock",
+      "**/go.sum"
+    ],
+    "prohibitedMethods": [
+      "external-file-change",
+      "git-commit-marker"
+    ],
+    "permittedMethods": [
+      "inline-completion-api"
+    ],
+    "flaggedMethods": [
+      "large-paste",
+      "change-velocity"
+    ],
+    "minLargePasteReviewTimeMs": 5000,
+    "maxTrackingGapSeconds": 1800
+  },
+  "exclusionAudit": [
+    {
+      "id": 1,
+      "timestamp": 1791912610867,
+      "globs": [],
+      "source": "assignment-activated"
+    },
+    {
+      "id": 2,
+      "timestamp": 1791912646771,
+      "globs": [],
+      "source": "assignment-activated"
+    }
+  ],
+  "studentIdentifier": "d.eze@alustudent.com",
+  "repoUrl": "https://github.com/deze-alu/alu-responsive-ui-summative",
+  "repoHeadCommit": "3809ce04167e4bc93c81d07b8baebca24a1e1f71",
+  "integrity": {
+    "algorithm": "sha256",
+    "hash": "54bf99a3548d708c30551265553aac606dabda8c7dcca5baea5ab4b49f3205b9"
+  }
+}
