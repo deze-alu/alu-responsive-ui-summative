@@ -15,9 +15,6 @@ Finance Tracker is a small web app for students. You add your expenses, and the 
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Regex Catalog](#regex-catalog)
-- [Keyboard Map](#keyboard-map)
-- [Accessibility Notes](#accessibility-notes)
-- [Testing Instructions](#testing-instructions)
 - [Code Report](#code-report)
 
 ## Overview
