@@ -1,5 +1,6 @@
 import { Expense } from '../../lib/expense.js'
 import { injectHTMLTemplate } from '../../lib/html.js'
+import { FILE_IMPORTED_EVENT } from '../file-import-export/file-import-export.js'
 
 class ExpenseChart extends HTMLElement {
 	constructor() {
@@ -10,7 +11,13 @@ class ExpenseChart extends HTMLElement {
 	async connectedCallback() {
 		this.chart = null
 		await injectHTMLTemplate('expense-chart.html', this)
+
+		this.setupEvents()
 		this.renderChart()
+	}
+
+	setupEvents() {
+		window.addEventListener(FILE_IMPORTED_EVENT, () => this.renderChart())
 	}
 
 	renderChart() {

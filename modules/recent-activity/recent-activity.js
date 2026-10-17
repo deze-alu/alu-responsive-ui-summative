@@ -8,6 +8,7 @@ import {
 } from '../../lib/svg.js'
 import { Expense } from '../../lib/expense.js'
 import { injectHTMLTemplate } from '../../lib/html.js'
+import { FILE_IMPORTED_EVENT } from '../file-import-export/file-import-export.js'
 
 class RecentActivity extends HTMLElement {
 	constructor() {
@@ -17,16 +18,12 @@ class RecentActivity extends HTMLElement {
 
 	async connectedCallback() {
 		await injectHTMLTemplate('recent-activity.html', this)
+		this.setupEvents()
 		this.renderRecentActivities()
 	}
 
-	getExpenses() {
-		try {
-			return JSON.parse(localStorage.getItem('expenses') || [])
-		} catch (e) {
-			console.error('Failed to load from LocalStorage: ', e)
-			return []
-		}
+	setupEvents() {
+		window.addEventListener(FILE_IMPORTED_EVENT, () => this.renderRecentActivities())
 	}
 
 	renderRecentActivities() {
