@@ -60,6 +60,7 @@ input[type='date'].form-field:invalid {
 	translate: 0 -50%;
 	background: var(--color-icon);
 	/* https://w3schools.dev/howto/howto_custom_select.asp */
+	/* https://codeshack.io/svg-to-data-uri-converter/ */
 	-webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
 		center / contain no-repeat;
 	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E")
@@ -114,7 +115,8 @@ input[type='date'].form-field:hover::-webkit-calendar-picker-indicator {
 }
 
 span[data-amount-error],
-span[data-date-error] {
+span[data-date-error],
+span[data-description-error] {
 	color: var(--color-accent);
 }
 

@@ -41,6 +41,9 @@ class AddTransactionForm extends HTMLElement {
 		// Inputs events
 		amountField.addEventListener('input', () => this.handleAmountInputEvent(amountField.value))
 		dateField.addEventListener('change', () => this.validateDate(dateField.value))
+		descriptionField.addEventListener('change', () =>
+			this.validateDescritpion(descriptionField.value)
+		)
 
 		// Submit Event
 		form.addEventListener('submit', (event) => {
@@ -87,10 +90,30 @@ class AddTransactionForm extends HTMLElement {
 			this.showError(field, 'Select a transaction date')
 			return false
 		}
+
+		const dateRegex = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/
+		if (!dateRegex.test(value)) {
+			this.showError(field, 'Please use a valid date')
+			return false
+		}
+
 		const today = new Date().toLocaleDateString('en-CA')
 
 		if (value > today) {
 			this.showError(field, 'Transaction date cannot be in the future')
+			return false
+		}
+
+		this.showError(field, '')
+		return true
+	}
+
+	validateDescritpion(value) {
+		const field = this.querySelector('[data-description-input]')
+		const descriptionRegex = /^\S(?:.*\S)?$/
+
+		if (!value.trim() || !descriptionRegex.test(value.trim())) {
+			this.showError(field, 'Please enter a valid string')
 			return false
 		}
 
@@ -118,7 +141,7 @@ class AddTransactionForm extends HTMLElement {
 		if (!isAmountValid || !isDateValid) return
 
 		const transaction = {
-			id: String(Math.floor(Math.random() * 1000000)),
+			id: `rec_${Math.floor(Math.random() * 1000000)}`,
 			description: formValues.descriptionField,
 			amount: formValues.amountField,
 			category: formValues.selectField,

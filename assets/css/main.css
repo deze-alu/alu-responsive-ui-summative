@@ -11,6 +11,7 @@
 @import url('./modules/recent-activity.css');
 @import url('./modules/form.css');
 @import url('./modules/transactions.css');
+@import url('./modules/about.css');
 
 body {
 	background-color: var(--bg-color);

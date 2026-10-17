@@ -69,6 +69,19 @@ class TransactionsTable extends HTMLElement {
 
 	search(expense) {
 		if (!this.query) return true
+		const query = this.query
+
+		const idRegex = /^rec_\d+$/i
+
+		if (idRegex.test(query)) {
+			return expense.id.toLowerCase() === query.toLowerCase()
+		}
+
+		const amountRegex = /^\d+(\.\d{1,2})?$/
+
+		if (amountRegex.test(query)) {
+			return String(expense.amount).includes(query)
+		}
 
 		const text =
 			`${expense.id} ${expense.description} ${expense.category} ${expense.amount}`.toLowerCase()

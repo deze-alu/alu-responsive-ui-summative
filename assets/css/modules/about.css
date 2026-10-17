@@ -1,0 +1,39 @@
+.about-page article {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+.about-page article > header {
+	padding-bottom: 2rem;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.about-page h1 {
+	font-size: 2rem;
+	line-height: 1.2;
+	margin: 0 0 1rem;
+}
+
+.about-page h2 {
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+}
+
+.about-page p {
+	color: var(--text-secondary);
+	line-height: 1.8;
+	margin: 0 0 1rem;
+}
+
+.about-page p:last-child {
+	margin-bottom: 0;
+}
+
+.about-page footer {
+	border-radius: var(--radius);
+}
+
+.about-page a {
+	color: var(--color-accent);
+}

@@ -42,11 +42,15 @@
 	</div>
 
 	<div class="field-group">
-		<label for="description">Date</label>
+		<div class="flex-layout">
+			<label for="description">Date</label>
+			<span data-description-error></span>
+		</div>
 		<textarea
 			class="form-field"
 			placeholder="Description"
 			id="description"
+			name="description"
 			data-description-input
 			required
 		></textarea>
